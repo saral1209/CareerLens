@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate --schema=./prisma/schema.prisma --skip-db-check"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.10",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "cross-env": "^10.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "postcss": "^8",
